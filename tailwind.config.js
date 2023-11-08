@@ -3,9 +3,6 @@ export default {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
-      fontFamily: {
-        roboto: 'var(--font-roboto)',
-      },
       backgroundImage: {
         gradient:
           'radial-gradient(var(--first-gradient)), radial-gradient(var(--second-gradient))',
