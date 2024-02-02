@@ -12,6 +12,45 @@ import { MenuItem } from './MenuItem'
 import logo from '../assets/logo.svg'
 import userPhoto from '../assets/photo.jpg'
 
+const sideBarItemsData = [
+  {
+    text: 'Home',
+    icon: House,
+    link: '/',
+  },
+  {
+    text: 'Explore',
+    icon: Compass,
+    link: '/explore',
+  },
+  {
+    text: 'Mensagens',
+    icon: ChatCircleDots,
+    link: '/messages',
+  },
+  {
+    text: 'Notificações',
+    icon: Heart,
+    link: '/notifications',
+  },
+  {
+    text: 'Criar',
+    icon: PlusCircle,
+    link: '/create',
+  },
+  {
+    text: 'Perfil',
+    photo: userPhoto,
+    link: '/profile',
+  },
+  {
+    text: 'Mais',
+    icon: List,
+    bigger: true,
+    link: '/more',
+  },
+]
+
 export function SideBar() {
   return (
     <aside className="flex flex-col items-start gap-7 px-6">
@@ -19,19 +58,17 @@ export function SideBar() {
 
       <nav>
         <ul className="list-none flex flex-col gap-8">
-          <MenuItem text="Home" icon={House} />
-
-          <MenuItem text="Explore" icon={Compass} />
-
-          <MenuItem text="Mensagens" icon={ChatCircleDots} />
-
-          <MenuItem text="Notificações" icon={Heart} />
-
-          <MenuItem text="Criar" icon={PlusCircle} />
-
-          <MenuItem text="Perfil" photo={userPhoto} />
-
-          <MenuItem text="Mais" icon={List} bigger />
+          {sideBarItemsData.map((item) => {
+            return (
+              <MenuItem
+                key={item.text}
+                text={item.text}
+                icon={item.icon}
+                bigger={item.bigger}
+                photo={item.photo}
+              />
+            )
+          })}
         </ul>
       </nav>
     </aside>
