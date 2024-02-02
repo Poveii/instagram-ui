@@ -1,7 +1,9 @@
+import { SideBar } from './components/SideBar'
+
 export function App() {
   return (
-    <div className="flex justify-center items-center h-screen">
-      <h1 className="font-bold text-2xl text-center">Instagram UI</h1>
+    <div className="grid grid-cols-[244px_1fr] h-screen font-roboto">
+      <SideBar />
     </div>
   )
 }
