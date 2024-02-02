@@ -63,6 +63,7 @@ export function SideBar() {
               <MenuItem
                 key={item.text}
                 text={item.text}
+                link={item.link}
                 icon={item.icon}
                 bigger={item.bigger}
                 photo={item.photo}
